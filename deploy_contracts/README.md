@@ -18,3 +18,5 @@ PUBLIC_KEY = "<METAMASK-PUBLIC-KEY>"
 
 * first compile contract with ```npx hardhat compile```
 * deploy contract to Ropsten test network with ```npx hardhat run scripts/deploy.js --network ropsten``` 
+
+You can now see that your smart contract is deployed by searching for it on [ropsten etherscan](https://ropsten.etherscan.io/)
