@@ -35,9 +35,7 @@ export const Header = () => {
   return (
     <nav className="flex items-center justify-between bg-transparent py-6 px-10">
       <div className="flex text-white mr-6">
-        <span className="font-semibold text-2xl tracking-tight">
-          MintyFresh
-        </span>
+        <span className="font-semibold text-2xl tracking-tight">ClipIt</span>
       </div>
       <div className="items-center">
         <div>
