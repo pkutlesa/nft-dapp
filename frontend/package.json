@@ -1,5 +1,5 @@
 {
-  "name": "nft-minter",
+  "name": "clipit-nft-minter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,6 +21,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "start": "serve -s build",
+    "prestart": "npm install -g serve",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
