@@ -25,7 +25,7 @@ export const MintMenu = () => {
         <div className="flex justify-center items-center w-full lg:w-1/2 p-5">
           <div className="max-w-lg">
             <h1 className="text-3xl tracking-wide text-white lg:text-4xl">
-              The easiest way to mint your NFTs
+              eSports NFT Collectibles
             </h1>
             <Content />
           </div>
