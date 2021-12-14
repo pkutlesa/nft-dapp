@@ -1,32 +1,38 @@
 import { useEffect, useState } from "react";
-import { connectWallet, getCurrentWalletConnected, mintNFT } from "./utils/interact.js";
+import {
+  connectWallet,
+  getCurrentWalletConnected,
+  mintNFT,
+} from "./utils/interact.js";
 
 const Minter = (props) => {
-
   //State variables
   const [walletAddress, setWallet] = useState("");
   const [status, setStatus] = useState("");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [url, setURL] = useState("");
- 
-  useEffect(async () => { //TODO: implement
-    const {address, status} = await getCurrentWalletConnected();
-    setWallet(address)
+
+  useEffect(async () => {
+    //TODO: implement
+    const { address, status } = await getCurrentWalletConnected();
+    setWallet(address);
     setStatus(status);
 
     addWalletListener();
   }, []);
 
-  const connectWalletPressed = async () => { //TODO: implement
+  const connectWalletPressed = async () => {
+    //TODO: implement
     const walletResponse = await connectWallet();
     setStatus(walletResponse.status);
     setWallet(walletResponse.address);
   };
 
-  const onMintPressed = async () => { //TODO: implement
+  const onMintPressed = async () => {
+    //TODO: implement
     const { status } = await mintNFT(url, name, description);
-    setStatus(status)
+    setStatus(status);
   };
 
   function addWalletListener() {
@@ -95,9 +101,7 @@ const Minter = (props) => {
       <button id="mintButton" onClick={onMintPressed}>
         Mint NFT
       </button>
-      <p id="status">
-        {status}
-      </p>
+      <p id="status">{status}</p>
     </div>
   );
 };
